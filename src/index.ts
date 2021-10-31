@@ -9,9 +9,6 @@ const csvFileReader = new CsvFileReader("football.csv")
 const matchReader = new MatchReader(csvFileReader)
 matchReader.load()
 
-const summary = new Summary(
-  new WinsAnalysis("Man United"),
-  new HtmlReport("test11")
-)
+const summary = Summary.winsAnalysisWithHtmlReport("Man What")
 
 summary.buildAndPrintReport(matchReader.matches)
